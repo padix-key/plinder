@@ -221,18 +221,6 @@ here for more details:
 - `dockerfiles/base/`: contains the files for the `base` image
 - `dockerfiles/main/`: contains the files for the `plinder` "app" image
 
-The CI workflow will automatically semver bump the `plinder` version and publish
-the `plinder` image to the GitHub Container Registry on merges to `main`. Control
-over the version bumping semantics is handled by inspecting the commit history
-since the previous release:
-
-- If `bumpversion skip` is present in the commit message, the version will not be bumped
-- If `bumpversion major` is present in the commit message, the major version will be bumped
-- If `bumpversion minor` is present in the commit message, the minor version will be bumped
-- If `bumpversion patch` is present in the commit message (or nothing is found), the patch version will be bumped
-
-**NOTE**: The CI workflow will use the __most recent__ match in the commit history to make its decision.
-
 # 📃 Publications
 Durairaj, Janani, Yusuf Adeshina, Zhonglin Cao, Xuejin Zhang, Vladas Oleinikovas, Thomas Duignan, Zachary McClure, Xavier Robin, Emanuele Rossi, Guoqing Zhou, Srimukh Prasad Veccham, Clemens Isert, Yuxing Peng, Prabindh Sundareson, Mehmet Akdel, Gabriele Corso, Hannes Stärk, Zachary Wayne Carpenter, Michael M. Bronstein, Emine Kucukbenli, Torsten Schwede, Luca Naef. 2024. “PLINDER: The Protein-Ligand Interactions Dataset and Evaluation Resource.”
 [bioRxiv](https://doi.org/10.1101/2024.07.17.603955)
